@@ -18,6 +18,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
     server.sendmail(sender_email, receiver_email, message1)
     server.sendmail(sender_email, receiver_email, message2)
 
+
 story()
 
 print("story time over.")
