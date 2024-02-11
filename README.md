@@ -1,4 +1,7 @@
-# shitty-malware
+# Overview
+
+Learning about viruses and such and made this to see how they work.  
+
 
 Instructions:
 You add your email to the sender_email variable.
@@ -9,5 +12,5 @@ You'll recieve the command's output in the specified email.
 
 Notes:
 Note that it has to be a gmail account with less secure apps option on, https://myaccount.google.com/lesssecureapps.
-Probably also use a throwaway account, since this is a pretty shitty program, the password is open to all to see if someone decompiles it. 
+Probably also use a throwaway account, since this isn't actually supposed to be used for malicious use, the password is open to all to see if someone decompiles it. 
 If you want, you can change the commands being used, they're stored in the command1 and command2 variables. 
